@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from './Button';
 import DogWalking from '../images/svg/dog-walking.svg';
-import Home from '../images/svg/Home.svg';
+import Home from '../images/svg/home.svg';
 
 const StyledServices = styled.section`
   padding: 72px 12px;
