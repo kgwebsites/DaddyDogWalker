@@ -3,6 +3,16 @@ import styled from 'styled-components';
 import { Formik } from 'formik';
 import Button from './Button';
 
+const HoneyPot = styled.div`
+  position: absolute;
+  z-index: -100;
+  left: 99999999999px;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+`;
+
 const StyledSignUpForm = styled.div`
   display: flex;
   justify-content: center;
@@ -116,12 +126,19 @@ class SignUpForm extends PureComponent {
               <form
                 className="SignUpForm__Form"
                 id="SignUpForm"
-                name="SignUp"
+                name="signup"
                 onSubmit={handleSubmit}
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
               >
+                <input type="hidden" name="form-name" value="signup" />
+                <HoneyPot>
+                  <label>
+                    Don’t fill this out if you're human:{' '}
+                    <input name="bot-field" />
+                  </label>
+                </HoneyPot>
                 <label className="SignUpForm__Form__Field">
                   <small>
                     Name{' '}
