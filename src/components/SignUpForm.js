@@ -18,6 +18,7 @@ const StyledSignUpForm = styled.div`
   justify-content: center;
   position: relative;
   overflow: hidden;
+  padding: 4px;
   .SignUpForm__Container {
     width: 625px;
     max-width: 100%;
