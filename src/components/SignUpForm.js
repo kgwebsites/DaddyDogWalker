@@ -99,6 +99,16 @@ class SignUpForm extends PureComponent {
     formikHandler(e);
   };
 
+  submit = values => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'signup', ...values }),
+    })
+      .then(() => alert('Success!'))
+      .catch(error => alert(error));
+  };
+
   render() {
     return (
       <StyledSignUpForm>
@@ -106,6 +116,7 @@ class SignUpForm extends PureComponent {
           <Formik
             initialValues={{ name: '', email: '', phone: '', zip: '' }}
             validate={this.validate}
+            onSubmit={this.submit}
           >
             {({
               values,
@@ -113,12 +124,14 @@ class SignUpForm extends PureComponent {
               touched,
               handleChange,
               handleBlur,
+              handleSubmit,
               isSubmitting,
             }) => (
               <form
                 className="SignUpForm__Form"
                 id="SignUpForm"
                 name="signup"
+                onSubmit={handleSubmit}
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
