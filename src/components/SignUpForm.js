@@ -58,6 +58,12 @@ const StyledSignUpForm = styled.div`
   }
 `;
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+}
+
 class SignUpForm extends PureComponent {
   validate = values => {
     const errors = {};
