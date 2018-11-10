@@ -8,7 +8,7 @@ const StyledHero = styled.div`
   padding: 0 10px;
   height: 90vh;
   position: absolute;
-  top: -156px;
+  top: -88px;
   left: 0;
   right: 0;
   display: flex;
