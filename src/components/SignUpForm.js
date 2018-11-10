@@ -91,7 +91,6 @@ class SignUpForm extends PureComponent {
 
   submit = (values, { setSubmitting }) => {
     setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
       setSubmitting(false);
     }, 400);
   };
@@ -119,6 +118,7 @@ class SignUpForm extends PureComponent {
                 id="SignUpForm"
                 name="SignUp"
                 onSubmit={handleSubmit}
+                method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
               >
