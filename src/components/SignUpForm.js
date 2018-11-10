@@ -24,7 +24,7 @@ const StyledSignUpForm = styled.div`
     background-color: white;
     border-radius: 4px;
     padding: 15px;
-    box-shadow: 0px 10px 5px -10px #333;
+    box-shadow: 0px 1px 4px -1px #333;
     .SignUpForm__Form {
       display: flex;
       flex-wrap: wrap;
