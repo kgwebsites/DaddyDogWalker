@@ -6,6 +6,9 @@ import Home from '../images/svg/home.svg';
 
 const StyledServices = styled.section`
   padding: 52px 12px;
+  @media (max-height: 500px) {
+    margin-top: 84px;
+  }
   .Services__Service {
     min-width: 200px;
     margin: 12px;

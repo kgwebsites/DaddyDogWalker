@@ -10,10 +10,10 @@ import './layout.css';
 
 const StyledLayout = styled.div`
   .Layout__Body {
-    margin: '0 auto';
-    max-width: 960;
-    position: 'relative';
-    padding-top: calc(90vh - 75px);
+    margin: 0 auto;
+    max-width: 960px;
+    position: relative;
+    padding-top: calc(90vh - 88px);
   }
 `;
 

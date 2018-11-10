@@ -8,12 +8,16 @@ const StyledHero = styled.div`
   padding: 0 10px;
   height: 90vh;
   position: absolute;
-  top: 0;
+  top: -156px;
   left: 0;
   right: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  @media (max-height: 500px) {
+    display: block;
+    margin-top: 100px;
+  }
   .Hero__Title {
     text-align: center;
     margin-top: 1.5rem;
@@ -21,8 +25,10 @@ const StyledHero = styled.div`
     color: white;
   }
   .Hero__Areas {
+    display: block;
     color: white;
     margin-bottom: 1.5rem;
+    text-align: center;
   }
   .Hero__Subtitle {
     text-align: center;
