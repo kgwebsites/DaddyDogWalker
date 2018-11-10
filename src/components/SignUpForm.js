@@ -109,7 +109,7 @@ class SignUpForm extends PureComponent {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'signup', ...values }),
+      body: encode({ 'form-name': 'contact', ...values }),
     })
       .then(() => alert('Success!'))
       .catch(error => alert(error));
@@ -136,13 +136,13 @@ class SignUpForm extends PureComponent {
               <form
                 className="SignUpForm__Form"
                 id="SignUpForm"
-                name="signup"
+                name="contact"
                 onSubmit={handleSubmit}
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
               >
-                <input type="hidden" name="form-name" value="signup" />
+                <input type="hidden" name="form-name" value="contact" />
                 <HoneyPot>
                   <label>
                     Don’t fill this out if you're human:{' '}
