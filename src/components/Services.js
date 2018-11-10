@@ -5,7 +5,7 @@ import DogWalking from '../images/svg/dog-walking.svg';
 import Home from '../images/svg/home.svg';
 
 const StyledServices = styled.section`
-  padding: 72px 12px;
+  padding: 52px 12px;
   .Services__Service {
     min-width: 200px;
     margin: 12px;
