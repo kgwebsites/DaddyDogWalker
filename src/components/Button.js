@@ -5,7 +5,7 @@ const StyledButton = styled.button`
   cursor: pointer;
   padding: 8px 30px;
   height: 30px;
-  width: 100%;
+  max-width: calc(100% - 60px);
   margin-top: 18px;
   background: #b3e5fc;
   border: 0;

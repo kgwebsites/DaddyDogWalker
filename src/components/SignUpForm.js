@@ -140,15 +140,15 @@ class SignUpForm extends PureComponent {
                 onSubmit={handleSubmit}
                 method="POST"
                 data-netlify="true"
-                // data-netlify-honeypot="bot-field"
+                data-netlify-honeypot="bot-field"
               >
                 <input type="hidden" name="form-name" value="contact" />
-                {/* <HoneyPot>
+                <HoneyPot>
                   <label>
                     Don’t fill this out if you're human:{' '}
                     <input name="bot-field" />
                   </label>
-                </HoneyPot> */}
+                </HoneyPot>
                 <label className="SignUpForm__Form__Field">
                   <small>
                     Name{' '}
