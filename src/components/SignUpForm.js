@@ -99,12 +99,6 @@ class SignUpForm extends PureComponent {
     formikHandler(e);
   };
 
-  submit = (values, { setSubmitting }) => {
-    setTimeout(() => {
-      setSubmitting(false);
-    }, 400);
-  };
-
   render() {
     return (
       <StyledSignUpForm>
@@ -112,7 +106,6 @@ class SignUpForm extends PureComponent {
           <Formik
             initialValues={{ name: '', email: '', phone: '', zip: '' }}
             validate={this.validate}
-            onSubmit={this.submit}
           >
             {({
               values,
@@ -120,14 +113,12 @@ class SignUpForm extends PureComponent {
               touched,
               handleChange,
               handleBlur,
-              handleSubmit,
               isSubmitting,
             }) => (
               <form
                 className="SignUpForm__Form"
                 id="SignUpForm"
                 name="signup"
-                onSubmit={handleSubmit}
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
