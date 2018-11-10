@@ -16,6 +16,8 @@ const HoneyPot = styled.div`
 const StyledSignUpForm = styled.div`
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
   .SignUpForm__Container {
     width: 625px;
     max-width: 100%;
