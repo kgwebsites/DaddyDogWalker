@@ -117,7 +117,10 @@ class SignUpForm extends PureComponent {
               <form
                 className="SignUpForm__Form"
                 id="SignUpForm"
+                name="SignUp"
                 onSubmit={handleSubmit}
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
               >
                 <label className="SignUpForm__Form__Field">
                   <small>

@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import BG from './BG';
-import Header from './header';
+import Header from './Header';
 import './layout.css';
 
 const StyledLayout = styled.div`
