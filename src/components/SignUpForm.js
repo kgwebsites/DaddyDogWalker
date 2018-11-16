@@ -111,6 +111,7 @@ class SignUpForm extends PureComponent {
   submit = values => {
     fetch('/', {
       method: 'POST',
+      headers: 'application/json',
       body: JSON.stringify({ 'form-name': 'contact', ...values }),
     })
       .then(() => alert('Success!'))
