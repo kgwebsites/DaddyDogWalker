@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Formik } from 'formik';
 import Button from './Button';
@@ -35,6 +35,7 @@ const StyledSignUpForm = styled.div`
         display: flex;
         flex-direction: column;
         width: 100%;
+        margin-bottom: 12px;
         &:first-child {
           padding-bottom: 5px;
         }
@@ -56,6 +57,22 @@ const StyledSignUpForm = styled.div`
       }
       .SignUpForm__Form__Submit {
         width: 100%;
+        .SignUpForm__Form__Submit {
+          margin-top: 0;
+        }
+      }
+      .SignUpForm__Message {
+        border: 1px solid;
+        padding: 12px;
+        margin-top: 12px;
+        &.Success {
+          background: rgba(89, 255, 90, 0.17);
+          border-color: green;
+        }
+        &.Error {
+          background: rgba(255, 89, 89, 0.17);
+          border-color: firebrick;
+        }
       }
     }
   }
@@ -67,7 +84,9 @@ function encode(data) {
     .join('&');
 }
 
-class SignUpForm extends PureComponent {
+class SignUpForm extends Component {
+  state = {};
+
   validate = values => {
     const errors = {};
     if (!values.name) errors.name = '* Required';
@@ -114,11 +133,16 @@ class SignUpForm extends PureComponent {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...values }),
     })
-      .then(() => alert('Success!'))
-      .catch(error => alert(error));
+      .then(() => {
+        this.setState({ showError: false, showSuccess: true });
+      })
+      .catch(error => {
+        this.setState({ showSuccess: false, showError: true });
+      });
   };
 
   render() {
+    const { showError, showSuccess } = this.state;
     return (
       <StyledSignUpForm>
         <div className="SignUpForm__Container">
@@ -229,6 +253,23 @@ class SignUpForm extends PureComponent {
               </form>
             )}
           </Formik>
+          {showSuccess && (
+            <div className="SignUpForm__Message Success">
+              Thank You! <br />
+              We will contact you via email within the next 48 hours from our
+              email address: thedaddydogwalker@gmail.com.
+            </div>
+          )}
+          {showError && (
+            <div className="SignUpForm__Message Error">
+              Ruh Oh! Something went wrong. <br />
+              Email us at{' '}
+              <a href="mailto:thedaddydogwalker@gmail.com">
+                thedaddydogwalker@gmail.com
+              </a>
+              and we'll contact you within 48 hours.
+            </div>
+          )}
         </div>
       </StyledSignUpForm>
     );
