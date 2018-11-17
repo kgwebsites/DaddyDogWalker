@@ -61,18 +61,18 @@ const StyledSignUpForm = styled.div`
           margin-top: 0;
         }
       }
-      .SignUpForm__Message {
-        border: 1px solid;
-        padding: 12px;
-        margin-top: 12px;
-        &.Success {
-          background: rgba(89, 255, 90, 0.17);
-          border-color: green;
-        }
-        &.Error {
-          background: rgba(255, 89, 89, 0.17);
-          border-color: firebrick;
-        }
+    }
+    .SignUpForm__Message {
+      border: 1px solid;
+      padding: 12px;
+      margin-top: 12px;
+      &.Success {
+        background: rgba(89, 255, 90, 0.17);
+        border-color: green;
+      }
+      &.Error {
+        background: rgba(255, 89, 89, 0.17);
+        border-color: firebrick;
       }
     }
   }

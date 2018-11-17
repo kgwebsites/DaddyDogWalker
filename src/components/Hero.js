@@ -6,7 +6,7 @@ const StyledHero = styled.div`
   margin: 0px auto;
   max-width: 960px;
   padding: 0 10px;
-  height: 90vh;
+  min-height: 90vh;
   position: absolute;
   top: -88px;
   left: 0;
@@ -20,7 +20,7 @@ const StyledHero = styled.div`
   }
   .Hero__Title {
     text-align: center;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
     margin-bottom: 0.5rem;
     color: white;
   }
@@ -40,8 +40,8 @@ const StyledHero = styled.div`
 const Hero = () => (
   <StyledHero>
     <h2 className="Hero__Title">
-      The one to trust with your furry kids in Rancho Cucamonga and surrounding
-      areas*.
+      The one to trust with your furry kids in Rancho Cucamonga <br />
+      and surrounding areas*.
     </h2>
     <small className="Hero__Areas">
       * Alta Loma, Etiwanda, Upland, Ontario, Fontana, and Rialto
